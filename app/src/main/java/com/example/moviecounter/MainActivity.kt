@@ -56,33 +56,22 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
-@Composable
-fun MovieCounter(modifier: Modifier = Modifier) {
-    var count by remember { mutableStateOf(0) }
-    var movieName by remember { mutableStateOf("") }
-
+fun ViewHolaCurso() {
     Column(
-        modifier = modifier.padding(16.dp),
+        modifier = Modifier
+            .fillMaxWith()
+            .padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(text = "You have added $count movies.")
-        Spacer(modifier = Modifier.height(16.dp))
-        TextField(
-            value = movieName,
-            onValueChange = {
-                val it = null
-                movieName = it.toString()
-            },
-            label = { androidx.compose.material3.Text("Movie Name") }
+        Text(
+            text = "Welcome to the Course!",
+            fontSize = 28.sp,
+            fontWeight = FontWeigh.Bold
         )
-        Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = {
-            if (movieName.isNotBlank()) {
-                count++
-                movieName = ""
-            }
-        }) {
-            Text("Add Movie")
-        }
+        Spacer(modifier = Modifier.heigh(16.dp))
+        Text(
+            text = "Hello, Student!",
+            fontSize = 20.xD
+
     }
 }
